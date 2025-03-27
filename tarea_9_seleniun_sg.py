@@ -1,9 +1,11 @@
+import io
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import unittest
+import HtmlTestRunner
 
 class TestSauceDemo(unittest.TestCase):
 
@@ -112,4 +114,14 @@ class TestSauceDemo(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    # Guardar resultados en archivo de texto
+    test_report = io.StringIO()
+    runner = unittest.TextTestRunner(stream=test_report, verbosity=2)
+    result = unittest.TestResult()
+    suite = unittest.TestLoader().loadTestsFromTestCase(TestSauceDemo)
+    runner.run(suite)
+    with open("test_report.txt", "w") as f:
+        f.write(test_report.getvalue())
+    
+    # Generar reporte en HTML
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="test_reports"), exit=False)
