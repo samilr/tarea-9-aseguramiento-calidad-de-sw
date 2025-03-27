@@ -82,7 +82,7 @@ driver.implicitly_wait(10)
 ## 8. Ejecución de Pruebas
 Ejecuté mis pruebas en el entorno de desarrollo y verifiqué que se ejecuten sin errores:
 ```bash
-python -m unittest test_script.py
+python -m unittest tarea_9_seleniun_sg.py
 ```
 
 ## 9. Generación de Reportes
