@@ -114,7 +114,6 @@ class TestSauceDemo(unittest.TestCase):
         self.driver.quit()
 
 if __name__ == "__main__":
-    # Guardar resultados en archivo de texto
     test_report = io.StringIO()
     runner = unittest.TextTestRunner(stream=test_report, verbosity=2)
     result = unittest.TestResult()
@@ -123,5 +122,4 @@ if __name__ == "__main__":
     with open("test_report.txt", "w") as f:
         f.write(test_report.getvalue())
     
-    # Generar reporte en HTML
     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="test_reports"), exit=False)
