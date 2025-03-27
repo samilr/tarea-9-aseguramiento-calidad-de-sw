@@ -97,7 +97,6 @@ Revisé el código de las pruebas para garantizar buenas prácticas y eficiencia
 
 ### Ejemplo de código de pruebas en Python
 ```python
-# Importar las bibliotecas necesarias
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
