@@ -124,3 +124,5 @@ class TestSauceDemo(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
+
+![image](https://github.com/user-attachments/assets/5541636f-bbcc-4a50-a72d-9ee92ee77421)
