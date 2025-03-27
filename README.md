@@ -11,6 +11,7 @@ Para configurar el entorno de pruebas, seguí estos pasos:
   ```
   selenium
   unittest
+  html-testRunner
   ```
 - Instalé las dependencias ejecutando:
   ```bash
